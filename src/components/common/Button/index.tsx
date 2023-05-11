@@ -6,7 +6,7 @@ export interface ButtonProps {
   onClick?: () => void;
 }
 
-const Button = ({ primary = false, text, ...props }: ButtonProps) => {
+const Button = ({ primary = true, text, ...props }: ButtonProps) => {
   return (
     <S.Container primary={primary} type="button" {...props}>
       {text}
