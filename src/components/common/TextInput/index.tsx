@@ -8,14 +8,7 @@ export interface TextInputProps extends InputHTMLAttributes<HTMLInputElement> {
   validate?: (v: string) => string;
 }
 
-const TextInput = ({
-  label,
-  id,
-  placeholder,
-  validate,
-  type = 'text',
-  ...rest
-}: TextInputProps) => {
+const TextInput = ({ label, id, placeholder = '입력 사항', validate, ...rest }: TextInputProps) => {
   const [value, setValue] = useState('');
   const [wasTouch, setWasTouch] = useState(false);
   const isError = wasTouch;
@@ -25,8 +18,8 @@ const TextInput = ({
     setWasTouch(true);
   };
 
-  const onChangeHandler = (event: React.FormEvent<HTMLInputElement>) => {
-    const _value = event.currentTarget.value;
+  const onChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const _value = event.target.value;
     setValue(_value);
     setWasTouch(true);
   };
@@ -36,7 +29,7 @@ const TextInput = ({
       <S.Label>{label}</S.Label>
       <S.Input
         id={id}
-        type={type}
+        type="text"
         placeholder={placeholder}
         value={value}
         onChange={onChangeHandler}
