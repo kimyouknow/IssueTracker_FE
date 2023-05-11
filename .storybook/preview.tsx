@@ -1,3 +1,5 @@
+const path = require('path');
+
 import type { Preview } from '@storybook/react';
 import { withThemeFromJSXProvider } from '@storybook/addon-styling';
 import { ThemeProvider } from '@emotion/react';
@@ -25,6 +27,13 @@ const preview: Preview = {
         color: /(background|color)$/i,
         date: /Date$/,
       },
+    },
+    webpackFinal: async (config, { configType }) => {
+      config.resolve.alias = {
+        ...config.resolve.alias,
+        '@': path.resolve(__dirname, '../src/'),
+      };
+      return config;
     },
   },
 };
