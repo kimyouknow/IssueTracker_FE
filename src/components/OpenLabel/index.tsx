@@ -4,26 +4,27 @@ import * as S from './OpenLabel.style';
 
 export interface OpenLabelProps {
   isOpen: boolean;
+  count: number;
 }
 
-const OpenLabel = ({ isOpen }: OpenLabelProps) => {
-  return isOpen ? <Open /> : <Close />;
+const OpenLabel = ({ isOpen, count }: OpenLabelProps) => {
+  return isOpen ? <Open count={count} /> : <Close count={count} />;
 };
 
-const Open = () => {
+const Open = ({ count }: { count: number }) => {
   return (
     <S.Open>
       <Icon type="alertCircle" />
-      <S.Text>열림</S.Text>
+      <S.Text>열린 이슈 {count}개</S.Text>
     </S.Open>
   );
 };
 
-const Close = () => {
+const Close = ({ count }: { count: number }) => {
   return (
     <S.Close>
       <Icon type="archive" />
-      <S.Text>닫힘</S.Text>
+      <S.Text>닫힌 이슈 {count}개</S.Text>
     </S.Close>
   );
 };

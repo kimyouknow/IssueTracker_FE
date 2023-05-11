@@ -5,10 +5,10 @@ export const Container = styled.div`
   justify-content: center;
   align-items: center;
   padding: 0px 8px;
-  gap: 2px;
+  gap: 4px;
 
   position: absolute;
-  width: 66px;
+  width: 126px;
   height: 30px;
 
   border-radius: 30px;
