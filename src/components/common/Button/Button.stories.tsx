@@ -1,36 +1,21 @@
 import { Meta, Story } from '@storybook/react';
 
-import Button, { IButton } from './Button';
+import Button, { ButtonProps } from './index';
 
 export default {
-  title: 'Example/Button',
+  title: 'Common/Button',
   component: Button,
-  argTypes: {
-    backgroundColor: { control: 'color' },
-  },
 } as Meta;
 
-const Template: Story<IButton> = args => <Button {...args} />;
+const Template: Story<ButtonProps> = args => <Button {...args} />;
 
 export const Primary = Template.bind({});
 Primary.args = {
-  primary: true,
-  label: 'Button',
+  text: 'Button',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  label: 'Button',
-};
-
-export const Large = Template.bind({});
-Large.args = {
-  size: 'large',
-  label: 'Button',
-};
-
-export const Small = Template.bind({});
-Small.args = {
-  size: 'small',
-  label: 'Button',
+  primary: false,
+  text: 'Button',
 };

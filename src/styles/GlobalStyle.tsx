@@ -1,9 +1,6 @@
 import { Global, css } from '@emotion/react';
 
-import Normalize from './Normalize';
-
 const styles = css`
-  ${Normalize}
   * {
     font-family: 'AppleSDGothicNeo', 'Noto Sans', 'sans-serif';
     box-sizing: border-box;
@@ -11,39 +8,73 @@ const styles = css`
     padding: 0;
   }
 
-  html {
-  }
-
-  button,
-  input,
-  select,
-  textarea {
-    background-color: transparent;
-    border: 0;
-    &:focus {
-      outline: none;
-      box-shadow: none;
-    }
-  }
   html,
-  body,
-  #___gatsby {
+  body {
     height: 100%;
-    scroll-behavior: smooth;
   }
 
-  a,
-  a:hover,
-  button {
-    color: inherit;
-    text-decoration: none;
+  a {
+    margin: 0;
+    background: transparent;
     cursor: pointer;
+    padding: 0;
+    vertical-align: baseline;
+    text-decoration: none;
+    color: inherit;
+    font-size: 100%;
   }
 
+  h1,
+  h2,
+  h3,
+  h4,
+  h5,
+  h6 {
+    font-size: 100%;
+    font-weight: normal;
+  }
+
+  input {
+    outline: none;
+    border: none;
+    background-color: transparent;
+  }
+
+  button {
+    margin: 0;
+    border: none;
+    border-radius: 0;
+    box-shadow: none;
+    background: inherit;
+    cursor: pointer;
+    padding: 0;
+    overflow: visible;
+  }
+
+  img {
+    border: none;
+    max-width: 100%;
+    vertical-align: middle;
+  }
+
+  ol,
   ul,
   li {
-    padding: 0;
     list-style: none;
+  }
+
+  article,
+  aside,
+  details,
+  figcaption,
+  figure,
+  footer,
+  header,
+  hgroup,
+  menu,
+  nav,
+  section {
+    display: block;
   }
 `;
 

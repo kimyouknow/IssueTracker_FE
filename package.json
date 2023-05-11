@@ -21,10 +21,12 @@
     "@types/react": "18.2.6",
     "@types/react-dom": "18.2.4",
     "axios": "^1.4.0",
+    "dayjs": "^1.11.7",
     "eslint": "^8.40.0",
     "eslint-config-next": "13.4.1",
     "msw": "^1.2.1",
     "next": "13.4.1",
+    "normalize.css": "^8.0.1",
     "react": "18.2.0",
     "react-dom": "18.2.0",
     "react-hook-form": "^7.43.9",
@@ -37,6 +39,7 @@
     "@storybook/addon-essentials": "^7.0.9",
     "@storybook/addon-interactions": "^7.0.9",
     "@storybook/addon-links": "^7.0.9",
+    "@storybook/addon-styling": "^1.0.6",
     "@storybook/blocks": "^7.0.9",
     "@storybook/nextjs": "^7.0.9",
     "@storybook/react": "^7.0.9",
@@ -50,7 +53,8 @@
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
-    "storybook": "^7.0.9"
+    "storybook": "^7.0.9",
+    "storybook-addon-next": "^1.8.0"
   },
   "lint-staged": {
     "src/**/*.{ts,tsx}": [
