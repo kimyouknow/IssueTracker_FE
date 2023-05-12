@@ -5,4 +5,9 @@ dayjs.locale('ko');
 
 export type DateType = ConfigType;
 
-export const formatDateYYYYMMDD = (date: DateType) => dayjs(date).format('YYYY-MM-DD');
+export const formatDateYYMMDD = (date: DateType) => {
+  const parsedDate = date === '' ? undefined : date;
+  return dayjs(parsedDate).format('YY-MM-DD');
+};
+
+export const isTwoDigit = (v: string) => /^\d{0,2}$/.test(v);

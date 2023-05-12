@@ -1,5 +1,5 @@
 import Icon from '@/components/common/Icon';
-import { DateType, formatDateYYYYMMDD } from '@/utils/date.util';
+import { DateType, formatDateYYMMDD } from '@/utils/date.util';
 
 import * as S from './DateLabel.style';
 
@@ -8,7 +8,7 @@ export interface DateLabelProps {
 }
 
 const DateLabel = ({ date }: DateLabelProps) => {
-  const YYYYMMDD = formatDateYYYYMMDD(date);
+  const YYYYMMDD = formatDateYYMMDD(date);
   return (
     <S.Container>
       <Icon type="calendar" />

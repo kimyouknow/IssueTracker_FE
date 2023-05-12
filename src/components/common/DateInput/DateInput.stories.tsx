@@ -1,5 +1,7 @@
 import { ComponentMeta, Story } from '@storybook/react';
 
+import { DateType } from '@/utils/date.util';
+
 import DateInput, { DateInputProps } from './index';
 
 export default {
@@ -14,4 +16,8 @@ export const Default = Template.bind({});
 Default.args = {
   label: 'Date Input',
   id: 'dateInput',
+  value: '',
+  onChange: (value: DateType) => {
+    console.log(value);
+  },
 };

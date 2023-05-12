@@ -5,11 +5,15 @@ export const Container = styled.div`
   align-items: center;
   width: 383px;
   height: 44px;
-  gap: 24px;
   border-radius: 16px;
+  gap: 24px;
 `;
 
 export const Label = styled.label``;
+
+export const InputContainer = styled.div`
+  display: flex;
+`;
 
 export const Input = styled.input``;
 

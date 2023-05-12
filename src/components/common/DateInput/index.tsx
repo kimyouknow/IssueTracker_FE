@@ -1,44 +1,50 @@
-import { InputHTMLAttributes, useState } from 'react';
+import { useState } from 'react';
+
+import { formatDateYYMMDD } from '@/utils/date.util';
+import { DateType } from '@/utils/date.util';
 
 import * as S from './DateInput.style';
 
-export interface DateInputProps extends InputHTMLAttributes<HTMLInputElement> {
+export interface DateInputProps {
   label: string;
   id: string;
-  validate?: (v: string) => string;
+  value: DateType;
+  onChange: (value: DateType) => void;
 }
 
-// TODO: YYYYMMDD 형식으로 포맷 강제하기
-const DateInput = ({ label, id, placeholder = '입력 사항', validate, ...rest }: DateInputProps) => {
-  const [value, setValue] = useState('');
-  const [wasTouch, setWasTouch] = useState(false);
-  const isError = wasTouch;
-  const error = validate && validate(value);
+const validateEachTowDigitOrLess = (str: string) => str.split('-').some(v => v.length > 2);
 
-  const onBlurHandler = () => {
-    setWasTouch(true);
+const DateInput = ({ label, id, value, onChange, ...rest }: DateInputProps) => {
+  const [year, setYear] = useState(formatDateYYMMDD(value).slice(0, 2));
+  const [month, setMonth] = useState(formatDateYYMMDD(value).slice(3, 5));
+  const [day, setDay] = useState(formatDateYYMMDD(value).slice(6, 8));
+
+  const handleChange = (event: React.ChangeEvent<HTMLInputElement>) => {
+    const newValue = event.target.value;
+
+    const [newYear, newMonth, newDay] = newValue.split('-');
+
+    if (!isNaN(Number(newYear)) && !isNaN(Number(newMonth)) && !isNaN(Number(newDay))) {
+      if (validateEachTowDigitOrLess(newValue)) return;
+      setYear(newYear);
+      setMonth(newMonth);
+      setDay(newDay);
+      onChange(formatDateYYMMDD(`${newYear}-${newMonth}-${newDay}`));
+    }
   };
-
-  const onChangeHandler = (event: React.ChangeEvent<HTMLInputElement>) => {
-    const _value = event.target.value;
-    setValue(_value);
-    setWasTouch(true);
-  };
-
   return (
-    <S.Container>
+    <S.Container id={id} {...rest}>
       <S.Label>{label}</S.Label>
-      <S.Input
-        id={id}
-        type="text"
-        placeholder={placeholder}
-        value={value}
-        onChange={onChangeHandler}
-        onBlur={onBlurHandler}
-        autoComplete="off"
-        {...rest}
-      />
-      {isError && <S.Error>{error}</S.Error>}
+      <S.InputContainer>
+        <S.Input
+          type="text"
+          value={`${year}-${month}-${day}`}
+          onChange={handleChange}
+          maxLength={8}
+          pattern="\d{2}-\d{2}-\d{2}"
+          placeholder="YY-MM-DD"
+        />
+      </S.InputContainer>
     </S.Container>
   );
 };
