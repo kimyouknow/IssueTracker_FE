@@ -38,6 +38,9 @@ const styles = css`
     outline: none;
     border: none;
     background-color: transparent;
+    :disabled {
+      cursor: not-allowed;
+    }
   }
 
   button {
