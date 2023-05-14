@@ -7,15 +7,35 @@ export default {
   component: Button,
 } as Meta;
 
-const Template: Story<ButtonProps> = args => <Button {...args} />;
+const Template: Story<ButtonProps> = args => <Button {...args}>Button</Button>;
 
-export const Primary = Template.bind({});
-Primary.args = {
-  text: 'Button',
+export const Large = Template.bind({});
+Large.args = {
+  size: 'l',
+};
+
+export const Medium = Template.bind({});
+Medium.args = {
+  size: 'm',
+};
+
+export const Small = Template.bind({});
+Small.args = {
+  size: 's',
 };
 
 export const Secondary = Template.bind({});
 Secondary.args = {
-  primary: false,
-  text: 'Button',
+  buttonStyle: 'secondary',
+};
+
+export const Disabled = Template.bind({});
+Disabled.args = {
+  disabled: true,
+};
+
+export const SecondaryDisabled = Template.bind({});
+SecondaryDisabled.args = {
+  buttonStyle: 'secondary',
+  disabled: true,
 };

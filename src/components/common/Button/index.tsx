@@ -1,15 +1,18 @@
-import * as S from './Button.style';
+import { ButtonHTMLAttributes, ReactNode } from 'react';
 
-export interface ButtonProps {
-  primary?: boolean;
-  text: string;
-  onClick?: () => void;
+import * as S from './Button.style';
+import { ButtonStyle, Size } from './Button.type';
+
+export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
+  size: Size;
+  buttonStyle: ButtonStyle;
+  children: ReactNode;
 }
 
-const Button = ({ primary = true, text, ...props }: ButtonProps) => {
+const Button = ({ size = 'm', buttonStyle = 'standard', children, ...props }: ButtonProps) => {
   return (
-    <S.Container primary={primary} type="button" {...props}>
-      {text}
+    <S.Container size={size} buttonStyle={buttonStyle} type="button" {...props}>
+      {children}
     </S.Container>
   );
 };
