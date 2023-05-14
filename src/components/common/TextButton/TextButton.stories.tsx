@@ -11,12 +11,12 @@ const Template: Story<TextButtonProps> = args => <TextButton {...args}>TextButto
 
 export const Medium = Template.bind({});
 Medium.args = {
-  size: 'm',
+  themeSize: 'm',
 };
 
 export const Small = Template.bind({});
 Small.args = {
-  size: 's',
+  themeSize: 's',
 };
 
 export const Disabled = Template.bind({});

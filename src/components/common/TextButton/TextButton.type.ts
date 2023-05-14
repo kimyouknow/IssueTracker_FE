@@ -1,1 +1,1 @@
-export type Size = 'm' | 's';
+export type ThemeSize = 'm' | 's';

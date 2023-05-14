@@ -1,16 +1,16 @@
 import { ButtonHTMLAttributes, ReactNode } from 'react';
 
 import * as S from './TextButton.style';
-import { Size } from './TextButton.type';
+import { ThemeSize } from './TextButton.type';
 
 export interface TextButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  size: Size;
+  themeSize: ThemeSize;
   children: ReactNode;
 }
 
-const TextButton = ({ size = 'm', children, ...props }: TextButtonProps) => {
+const TextButton = ({ themeSize = 'm', children, ...props }: TextButtonProps) => {
   return (
-    <S.Container size={size} type="button" {...props}>
+    <S.Container themeSize={themeSize} type="button" {...props}>
       {children}
     </S.Container>
   );

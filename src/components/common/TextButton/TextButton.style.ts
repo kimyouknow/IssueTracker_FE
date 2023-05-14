@@ -1,9 +1,9 @@
 import { Theme, css } from '@emotion/react';
 import styled from '@emotion/styled';
 
-import { Size } from './TextButton.type';
+import { ThemeSize } from './TextButton.type';
 
-export const Container = styled.button<{ size: Size }>`
+export const Container = styled.button<{ themeSize: ThemeSize }>`
   display: flex;
   justify-content: center;
   align-items: center;
@@ -12,7 +12,7 @@ export const Container = styled.button<{ size: Size }>`
   color: ${({ theme: { colors } }) => colors.grayScale.label};
   background-color: ${({ theme: { colors } }) => colors.grayScale.white};
 
-  ${({ theme, size }) => sizeMap[size](theme)}
+  ${({ theme, themeSize }) => sizeMap[themeSize](theme)}
 
   :hover {
     color: ${({ theme: { colors } }) => colors.grayScale.body};
