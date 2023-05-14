@@ -14,6 +14,10 @@ const config: StorybookConfig = {
       },
     },
   ],
+  babel: async options => ({
+    ...options,
+    plugins: ['@emotion'],
+  }),
   framework: {
     name: '@storybook/nextjs',
     options: {},
