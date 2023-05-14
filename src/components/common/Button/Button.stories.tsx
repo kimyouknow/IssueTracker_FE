@@ -11,17 +11,17 @@ const Template: Story<ButtonProps> = args => <Button {...args}>Button</Button>;
 
 export const Large = Template.bind({});
 Large.args = {
-  size: 'l',
+  themeSize: 'l',
 };
 
 export const Medium = Template.bind({});
 Medium.args = {
-  size: 'm',
+  themeSize: 'm',
 };
 
 export const Small = Template.bind({});
 Small.args = {
-  size: 's',
+  themeSize: 's',
 };
 
 export const Secondary = Template.bind({});
