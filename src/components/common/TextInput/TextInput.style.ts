@@ -15,16 +15,12 @@ export const Container = styled.div<{ themeSize: ThemeSize; isError: boolean; is
   input::placeholder {
     color: ${({ theme: { colors } }) => colors.grayScale.placeHoler};
   }
-  :active {
+  :has(input:active),
+  :has(input:focus) {
     background-color: ${({ theme: { colors } }) => colors.grayScale.white};
     border: 1px solid ${({ theme: { colors } }) => colors.grayScale.titleActive};
   }
-  // filled
-  :not(:placeholder-shown):not(:focus) {
-    color: ${({ theme: { colors } }) => colors.grayScale.black};
-    background-color: ${({ theme: { colors } }) => colors.grayScale.inputBackground};
-  }
-  :disabled {
+  :has(input:disabled) {
     background-color: ${({ theme: { colors } }) => colors.grayScale.inputBackground};
     opacity: 0.5;
   }
@@ -39,7 +35,9 @@ export const Label = styled.label`
   color: ${({ theme: { colors } }) => colors.grayScale.label};
 `;
 
-export const Input = styled.input``;
+export const Input = styled.input`
+  width: 100%;
+`;
 
 const Message = styled.span`
   display: inline-block;
@@ -55,7 +53,10 @@ export const Error = styled(Message)`
   color: ${({ theme: { colors } }) => colors.error.dark};
 `;
 
-export const DateInput = styled.input``;
+export const DateInput = styled.input`
+  color: inherit;
+  background-color: inherit;
+`;
 
 const successCss = ({ colors }: Theme) => css`
   background-color: ${colors.success.light};
@@ -77,6 +78,7 @@ const errorCss = ({ colors }: Theme) => css`
   input::placeholder {
     color: ${colors.error.dark};
   }
+
   :not(:placeholder-shown):not(:focus) {
     background-color: ${colors.error.light};
   }
