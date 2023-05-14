@@ -31,6 +31,14 @@ const colors = {
     gray_500: '#E5E5EA',
     gray_600: '#F2F2F7',
     white: '#FFFFFF',
+    titleActive: '#14142B;',
+    body: '#4E4B66',
+    label: '#6E7191',
+    placeHoler: '#A0A3BD',
+    line: '#D9DBE9',
+    inputBackground: '#EFF0F6',
+    background: '#F7F7FC',
+    offWhite: '#FEFEFE',
   },
 };
 
