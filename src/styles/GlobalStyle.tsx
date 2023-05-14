@@ -49,6 +49,9 @@ const styles = css`
     cursor: pointer;
     padding: 0;
     overflow: visible;
+    :disabled {
+      cursor: not-allowed;
+    }
   }
 
   img {
