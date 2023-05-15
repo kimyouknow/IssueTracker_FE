@@ -1,3 +1,4 @@
+import { SVGAttributes } from 'react';
 import { IconBaseProps } from 'react-icons/lib';
 import { MdKeyboardVoice } from 'react-icons/md';
 import {
@@ -51,7 +52,7 @@ const SIZE = {
   xs: '10',
 };
 
-export interface IconProps {
+export interface IconProps extends SVGAttributes<SVGElement> {
   type: keyof typeof ICON;
   size?: keyof typeof SIZE;
 }

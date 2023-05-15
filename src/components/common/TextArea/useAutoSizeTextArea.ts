@@ -3,7 +3,7 @@ import { useEffect } from 'react';
 const useAutosizeTextArea = (textAreaRef: HTMLTextAreaElement | null, value: string) => {
   useEffect(() => {
     if (textAreaRef) {
-      textAreaRef.style.height = '0px';
+      textAreaRef.style.height = '0';
       const scrollHeight = textAreaRef.scrollHeight;
 
       textAreaRef.style.height = scrollHeight + 'px';

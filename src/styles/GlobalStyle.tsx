@@ -38,6 +38,9 @@ const styles = css`
     outline: none;
     border: none;
     background-color: transparent;
+    :disabled {
+      cursor: not-allowed;
+    }
   }
 
   button {
@@ -49,6 +52,9 @@ const styles = css`
     cursor: pointer;
     padding: 0;
     overflow: visible;
+    :disabled {
+      cursor: not-allowed;
+    }
   }
 
   img {

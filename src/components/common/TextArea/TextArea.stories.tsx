@@ -12,6 +12,7 @@ const Template: Story<TextAreaProps> = args => <TextArea {...args} />;
 
 export const Default = Template.bind({});
 Default.args = {
-  label: 'Label',
-  id: 'text',
+  id: 'textarea',
+  label: '코멘트를 입력하세요',
+  placeholder: '코멘트를 입력하세요',
 };

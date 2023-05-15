@@ -1,1 +1,1 @@
-export type ProgressiveType = 'bar' | 'message';
+export type ProgressiveType = 'bar' | 'withMessage';

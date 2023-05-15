@@ -16,6 +16,11 @@ Default.args = {
   count: 0,
 };
 
+export const NonCount = Template.bind({});
+NonCount.args = {
+  isOpen: true,
+};
+
 export const Open = Template.bind({});
 Open.args = {
   isOpen: true,
