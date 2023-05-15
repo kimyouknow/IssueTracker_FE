@@ -7,9 +7,8 @@ export const Container = styled.div`
   padding: 0px 8px;
   gap: 4px;
 
-  position: absolute;
-  width: 126px;
-  height: 30px;
+  width: 100px;
+  height: 40px;
 
   border-radius: 30px;
   ${({ theme: { typography } }) => typography.text.xSmall}
