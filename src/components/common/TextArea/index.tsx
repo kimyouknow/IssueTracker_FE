@@ -1,5 +1,7 @@
 import { TextareaHTMLAttributes, useRef, useState } from 'react';
 
+import Icon from '@/components/common/Icon';
+
 import * as S from './TextArea.style';
 import useAutoSizeTextArea from './useAutoSizeTextArea';
 
@@ -13,7 +15,8 @@ const TextArea = ({ label, id, placeholder = '입력 사항', ...rest }: TextAre
   const textAreaRef = useRef<HTMLTextAreaElement>(null);
   const [value, setValue] = useState('');
 
-  useAutoSizeTextArea(textAreaRef.current, value);
+  // FIXME: 기본 높이 고정에 기본 높이를 넘어갈 때만 높이가 증가되게 수정하기
+  // useAutoSizeTextArea(textAreaRef.current, value);
 
   const onChangeHandler = (event: React.ChangeEvent<HTMLTextAreaElement>) => {
     const _value = event.target.value;
@@ -22,7 +25,7 @@ const TextArea = ({ label, id, placeholder = '입력 사항', ...rest }: TextAre
 
   return (
     <S.Container>
-      <S.Label>{label}</S.Label>
+      {value && <S.Label>{label}</S.Label>}
       <S.TextArea
         ref={textAreaRef}
         id={id}
@@ -33,6 +36,11 @@ const TextArea = ({ label, id, placeholder = '입력 사항', ...rest }: TextAre
         rows={1}
         {...rest}
       />
+      <S.Line />
+      <S.FileAttach>
+        <Icon type="paperClip" />
+        <span>파일 첨부하기</span>
+      </S.FileAttach>
     </S.Container>
   );
 };
