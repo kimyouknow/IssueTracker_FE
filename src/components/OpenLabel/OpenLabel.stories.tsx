@@ -13,22 +13,18 @@ const Template: Story<OpenLabelProps> = args => <OpenLabel {...args} />;
 export const Default = Template.bind({});
 Default.args = {
   isOpen: true,
-  count: 0,
-};
-
-export const NonCount = Template.bind({});
-NonCount.args = {
-  isOpen: true,
 };
 
 export const Open = Template.bind({});
 Open.args = {
   isOpen: true,
-  count: 10,
+  openCount: 10,
+  closeCount: 10,
 };
 
 export const Close = Template.bind({});
 Close.args = {
   isOpen: false,
-  count: 10,
+  openCount: 10,
+  closeCount: 10,
 };
