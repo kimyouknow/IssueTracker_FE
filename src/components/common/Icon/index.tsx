@@ -20,6 +20,10 @@ import {
   TbSquareRoundedChevronDownFilled,
   TbPlayerStop,
   TbPlayerStopFilled,
+  TbChevronDown,
+  TbChevronUp,
+  TbChevronLeft,
+  TbChevronRight,
 } from 'react-icons/tb';
 
 const ICON = {
@@ -42,6 +46,10 @@ const ICON = {
   filledSquare: (props: IconBaseProps) => <TbPlayerStopFilled {...props} />,
   checkedFilledSquare: (props: IconBaseProps) => <TbSquareRoundedChevronDownFilled {...props} />,
   voice: (props: IconBaseProps) => <MdKeyboardVoice {...props} />,
+  chevronDown: (props: IconBaseProps) => <TbChevronDown {...props} />,
+  chevronUp: (props: IconBaseProps) => <TbChevronUp {...props} />,
+  chevronRight: (props: IconBaseProps) => <TbChevronLeft {...props} />,
+  chevronLeft: (props: IconBaseProps) => <TbChevronRight {...props} />,
 };
 
 const SIZE = {
