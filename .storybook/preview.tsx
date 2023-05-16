@@ -1,12 +1,21 @@
+import React from 'react';
+
 const path = require('path');
 
 import type { Preview } from '@storybook/react';
-import { withThemeFromJSXProvider } from '@storybook/addon-styling';
 import { ThemeProvider } from '@emotion/react';
 import themes from '../src/styles/theme';
 import GlobalStyles from '../src/styles/GlobalStyle';
 
 const preview: Preview = {
+  decorators: [
+    Story => (
+      <ThemeProvider theme={themes}>
+        <GlobalStyles />
+        <Story />
+      </ThemeProvider>
+    ),
+  ],
   parameters: {
     viewport: {},
     actions: { argTypesRegex: '^on[A-Z].*' },
@@ -25,16 +34,5 @@ const preview: Preview = {
     },
   },
 };
-
-export const decorators = [
-  withThemeFromJSXProvider({
-    themes: {
-      light: themes,
-    },
-    defaultTheme: 'light',
-    Provider: ThemeProvider,
-    GlobalStyles,
-  }),
-];
 
 export default preview;
