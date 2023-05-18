@@ -3,7 +3,7 @@ import { ComponentMeta, Story } from '@storybook/react';
 import SearchBar, { SearchBarProps } from './index';
 
 export default {
-  title: 'common/SearchBar',
+  title: 'domain/SearchBar',
   component: SearchBar,
   args: {},
 } as ComponentMeta<typeof SearchBar>;
@@ -11,8 +11,4 @@ export default {
 const Template: Story<SearchBarProps> = args => <SearchBar {...args} />;
 
 export const Default = Template.bind({});
-Default.args = {
-  onChange: (v: string) => {
-    console.log('Input Value', v);
-  },
-};
+Default.args = {};
