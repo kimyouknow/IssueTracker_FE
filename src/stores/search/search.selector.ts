@@ -27,7 +27,7 @@ export const textSearchOptionSelector = selector({
     if (typeof newValue !== 'string') return;
 
     if (newValue === '') {
-      return initFilterOption;
+      return;
     }
 
     const tokens = newValue.trim().split(' ');
