@@ -3,6 +3,7 @@ import styled from '@emotion/styled';
 export const Container = styled.div`
   width: 59px;
   height: 32px;
+  position: relative;
 `;
 
 export const Indicator = styled.button`
@@ -17,7 +18,10 @@ export const Indicator = styled.button`
   }
 `;
 
-export const Panels = styled.ul`
+export const Panels = styled.ul<{ left: number; top: number }>`
+  position: absolute;
+  left: ${({ left }) => left - 30}px;
+  top: ${({ top }) => 40 + top}px;
   width: 240px;
 
   background-color: ${({ theme: { colors } }) => colors.grayScale.line};
