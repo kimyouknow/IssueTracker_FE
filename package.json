@@ -10,7 +10,7 @@
     "lint": "next lint",
     "prepare": "husky install",
     "sb": "storybook dev -p 6006",
-    "build-sb": "storybook build"
+    "build-storybook": "storybook build"
   },
   "dependencies": {
     "@emotion/react": "^11.11.0",
@@ -46,6 +46,7 @@
     "@storybook/testing-library": "^0.0.14-next.2",
     "@typescript-eslint/eslint-plugin": "^5.59.2",
     "@typescript-eslint/parser": "^5.59.2",
+    "chromatic": "^6.17.4",
     "eslint-config-prettier": "^8.8.0",
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-react": "^7.32.2",
@@ -66,5 +67,7 @@
   },
   "msw": {
     "workerDirectory": "public"
-  }
+  },
+  "readme": "ERROR: No README data found!",
+  "_id": "issue-tracker-fe@0.1.0"
 }
