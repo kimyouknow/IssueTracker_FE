@@ -2,7 +2,7 @@ import 'normalize.css/normalize.css';
 import { Inter } from 'next/font/google';
 import React from 'react';
 
-import Provider from '@/app/Provider';
+import Provider from './Provider';
 
 const inter = Inter({ subsets: ['latin'] });
 
