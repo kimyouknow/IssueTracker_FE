@@ -1,11 +1,13 @@
+'use client';
+
 import { ButtonHTMLAttributes, ReactNode } from 'react';
 
 import * as S from './Button.style';
 import { ButtonStyle, ThemeSize } from './Button.type';
 
 export interface ButtonProps extends ButtonHTMLAttributes<HTMLButtonElement> {
-  themeSize: ThemeSize;
-  buttonStyle: ButtonStyle;
+  themeSize?: ThemeSize;
+  buttonStyle?: ButtonStyle;
   children: ReactNode;
 }
 
