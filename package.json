@@ -1,5 +1,6 @@
 {
   "name": "issue-tracker-fe",
+  "homepage": "https://kimyouknow.github.io/IssueTracker_FE/",
   "version": "0.1.0",
   "private": true,
   "scripts": {
@@ -10,7 +11,8 @@
     "lint": "next lint",
     "prepare": "husky install",
     "sb": "storybook dev -p 6006",
-    "build-storybook": "storybook build"
+    "build-storybook": "storybook build",
+    "deploy-sb": "gh-pages -d storybook-static -b sb-deploy"
   },
   "dependencies": {
     "@emotion/react": "^11.11.0",
@@ -51,6 +53,7 @@
     "eslint-plugin-import": "^2.27.5",
     "eslint-plugin-react": "^7.32.2",
     "eslint-plugin-storybook": "^0.6.12",
+    "gh-pages": "^5.0.0",
     "husky": "^8.0.3",
     "lint-staged": "^13.2.2",
     "prettier": "^2.8.8",
