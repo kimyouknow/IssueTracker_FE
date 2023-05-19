@@ -38,15 +38,19 @@ const Template: Story<DropDownProps> = args => {
 };
 
 export const Default = Template.bind({});
-Default.args = {};
+Default.args = {
+  left: 20,
+};
 
 export const Open = Template.bind({});
 Open.args = {
   initMode: true,
+  left: 20,
 };
 
 export const InitSelected = Template.bind({});
 InitSelected.args = {
   value: MOCK_OPTIONS.slice(0, 2),
   initMode: true,
+  left: 20,
 };
