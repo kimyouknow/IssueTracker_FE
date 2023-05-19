@@ -3,7 +3,7 @@ import { ComponentMeta, Story } from '@storybook/react';
 import OpenLabel, { OpenLabelProps } from './index';
 
 export default {
-  title: 'common/OpenLabel',
+  title: 'domain/OpenLabel',
   component: OpenLabel,
   args: {},
 } as ComponentMeta<typeof OpenLabel>;

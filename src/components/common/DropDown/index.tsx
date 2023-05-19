@@ -17,6 +17,8 @@ export interface DropDownProps {
   onChange: (event: { target: any; type?: any }) => void;
   onBlur?: (event: { target: any; type?: any }) => void;
   initMode?: boolean;
+  left?: number;
+  top?: number;
 }
 
 const DropDown = ({
@@ -27,6 +29,8 @@ const DropDown = ({
   onChange,
   onBlur,
   initMode = false,
+  left = 0,
+  top = 0,
   ...rest
 }: DropDownProps) => {
   const { containerRef, isDropdownOpen, handleClickDropdownTrigger, openDropdown } =
@@ -60,7 +64,7 @@ const DropDown = ({
         {isDropdownOpen ? <Icon type="chevronUp" /> : <Icon type="chevronDown" />}
       </S.Indicator>
       {isDropdownOpen && (
-        <S.Panels>
+        <S.Panels left={left} top={top}>
           <S.PanelsHeader>{label}</S.PanelsHeader>
           {options.map(({ id, label }) => (
             <S.Option
