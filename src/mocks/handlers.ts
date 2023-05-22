@@ -1,19 +1,7 @@
-import { faker } from '@faker-js/faker/locale/ko';
-import { rest } from 'msw';
+import labelMockHandler from './label/label.mockHandler';
+import milestoneMockHandler from './milestone/milestone.mockHandler';
+import userMockHandler from './user/user.mockHandler';
 
-const createUser = () => ({
-  id: faker.datatype.uuid(),
-  name: faker.name.fullName(),
-});
+const handlers = [...userMockHandler, ...labelMockHandler, ...milestoneMockHandler];
 
-export const createRandomUserIdList = (n: number) => Array.from({ length: n }, () => createUser());
-
-export const handlers = [
-  rest.post('/login', (req, res, ctx) => {
-    return res(ctx.status(200));
-  }),
-
-  rest.get('/user', (req, res, ctx) => {
-    return res(ctx.status(200), ctx.json(createRandomUserIdList(10)));
-  }),
-];
+export default handlers;
