@@ -5,8 +5,8 @@ import axios, {
   InternalAxiosRequestConfig,
 } from 'axios';
 
-import { ROOT_API_URL } from '@/api/requestUrl';
-import { onResponse, onResponseError } from '@/api/responseHandler';
+import { ROOT_API_URL } from './requestUrl';
+import { onResponse, onResponseError } from './responseHandler';
 
 type CustomResponseFormat<T = any> = T;
 

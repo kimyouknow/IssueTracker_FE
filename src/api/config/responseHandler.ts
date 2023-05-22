@@ -1,6 +1,6 @@
 import { AxiosError, AxiosResponse } from 'axios';
 
-import { HttpError } from '@/api/customError';
+import { HttpError } from './customError';
 
 interface CustomServerError {
   data: {
