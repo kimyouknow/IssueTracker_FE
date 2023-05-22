@@ -25,5 +25,6 @@ const config: StorybookConfig = {
   docs: {
     autodocs: 'tag',
   },
+  staticDirs: ['../public'], // msw 세팅을 위해 필요하다~
 };
 export default config;
