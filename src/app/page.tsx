@@ -1,7 +1,10 @@
+import TabsNav from '@/components/TabsNav';
+
 const Home = () => {
   return (
     <main>
-      <h1>heelow</h1>
+      <h1>hello</h1>
+      <TabsNav />
     </main>
   );
 };

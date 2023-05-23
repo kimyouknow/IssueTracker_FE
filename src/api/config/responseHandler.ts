@@ -9,13 +9,12 @@ interface CustomServerError {
 }
 
 export const onResponse = (response: AxiosResponse) => {
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-assignment
-  const data = response.data;
+  //TODO: data 한겹 뺄 수 있게 수정하기
+  // const data = response.data;
   // const data = response.data as Record<string, unknown> interceptors.response.use 에러 발생
-
-  const { headers } = response;
-  // eslint-disable-next-line @typescript-eslint/no-unsafe-return
-  return { ...data, headers };
+  // const { headers } = response;
+  // return { ...data, headers };
+  return response;
 };
 
 export const onResponseError = (error: AxiosError) => {
