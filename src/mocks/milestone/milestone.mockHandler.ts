@@ -7,7 +7,14 @@ import { createRandomMilestones } from './milestone.mock';
 const milestoneMockHandler = [
   // GET: api/milestones
   rest.get(ROOT_API_URL + REQUEST_API.MILESTONE.INDEX, (req, res, ctx) => {
-    return res(ctx.status(200), ctx.json(createRandomMilestones(10)));
+    return res(
+      ctx.status(200),
+      ctx.json({
+        countOfOpenMilestones: 10,
+        countOfClosedMilestones: 0,
+        milestones: createRandomMilestones(10),
+      }),
+    );
   }),
 ];
 

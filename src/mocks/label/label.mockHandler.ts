@@ -6,8 +6,8 @@ import { createRandomMilestones } from './label.mock';
 
 const labelMockHandler = [
   // GET: api/labels
-  rest.get(ROOT_API_URL + REQUEST_API.MILESTONE.INDEX, (req, res, ctx) => {
-    return res(ctx.status(200), ctx.json(createRandomMilestones(10)));
+  rest.get(ROOT_API_URL + REQUEST_API.LABEL.INDEX, (req, res, ctx) => {
+    return res(ctx.status(200), ctx.json({ labels: createRandomMilestones(10) }));
   }),
 ];
 
