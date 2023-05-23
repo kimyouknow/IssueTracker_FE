@@ -1,3 +1,5 @@
+import Image from 'next/image';
+
 import Icon from '@/components/common/Icon';
 
 import * as S from './DropDown.style';
@@ -6,7 +8,8 @@ import useDropDown from './useDropDown';
 export interface OptionsType {
   id: string;
   label: string;
-  value: string;
+  iconSrc?: string;
+  bgColor?: string;
 }
 
 export interface DropDownProps {
@@ -19,6 +22,7 @@ export interface DropDownProps {
   initMode?: boolean;
   left?: number;
   top?: number;
+  isCheckAvailable?: boolean;
 }
 
 const DropDown = ({
@@ -31,6 +35,7 @@ const DropDown = ({
   initMode = false,
   left = 0,
   top = 0,
+  isCheckAvailable = true,
   ...rest
 }: DropDownProps) => {
   const { containerRef, isDropdownOpen, handleClickDropdownTrigger, openDropdown } =
@@ -66,7 +71,7 @@ const DropDown = ({
       {isDropdownOpen && (
         <S.Panels left={left} top={top}>
           <S.PanelsHeader>{label}</S.PanelsHeader>
-          {options.map(({ id, label }) => (
+          {options.map(({ id, label, iconSrc, bgColor }) => (
             <S.Option
               key={id}
               onClick={event => {
@@ -74,8 +79,14 @@ const DropDown = ({
                 handleClickOption(id);
               }}
             >
-              {label}
-              {isSelected(id) ? <Icon type="circleCheck" /> : <Icon type="circle" />}
+              <S.OptionInfo isCheckAvailable={isCheckAvailable}>
+                {iconSrc && <Image src={iconSrc} alt="label" width={20} height={20} />}
+                {bgColor && <S.ColorIcon bgColor={bgColor} />}
+                <span>{label}</span>
+              </S.OptionInfo>
+
+              {isCheckAvailable &&
+                (isSelected(id) ? <Icon type="circleCheck" /> : <Icon type="circle" />)}
             </S.Option>
           ))}
         </S.Panels>

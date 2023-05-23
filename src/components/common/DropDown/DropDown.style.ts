@@ -46,7 +46,6 @@ export const Option = styled.li`
   justify-content: space-between;
   align-items: center;
   padding: 8px 16px;
-  gap: 8px;
 
   width: 240px;
   height: 44px;
@@ -56,4 +55,30 @@ export const Option = styled.li`
     cursor: pointer;
     background-color: ${({ theme: { colors } }) => colors.grayScale.inputBackground};
   }
+`;
+
+export const OptionInfo = styled.div<{ isCheckAvailable: boolean }>`
+  display: flex;
+  flex-direction: row;
+  align-items: center;
+  width: ${({ isCheckAvailable }) => (isCheckAvailable ? '90' : '100')}%;
+  gap: 8px;
+
+  > img {
+    border-radius: 50%;
+  }
+  > span {
+    text-overflow: ellipsis;
+    overflow: hidden;
+    width: ${({ isCheckAvailable }) => (isCheckAvailable ? '90' : '100')}%;
+    height: 1.2em;
+    white-space: nowrap;
+  }
+`;
+
+export const ColorIcon = styled.div<{ bgColor: string }>`
+  width: 20px;
+  height: 20px;
+  border-radius: 50%;
+  background-color: ${({ bgColor }) => bgColor};
 `;
