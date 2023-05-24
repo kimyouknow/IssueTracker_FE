@@ -1,6 +1,7 @@
 import Image from 'next/image';
 
 import Icon from '@/components/common/Icon';
+import { OptionsType } from '@/types/option.type';
 
 import * as S from './DropDown.style';
 import useDropDown from './useDropDown';
