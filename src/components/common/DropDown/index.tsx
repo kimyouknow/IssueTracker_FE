@@ -1,16 +1,11 @@
 import Image from 'next/image';
+import { ReactNode } from 'react';
 
 import Icon from '@/components/common/Icon';
+import { OptionsType } from '@/types/option.type';
 
 import * as S from './DropDown.style';
 import useDropDown from './useDropDown';
-
-export interface OptionsType {
-  id: string;
-  label: string;
-  iconSrc?: string;
-  bgColor?: string;
-}
 
 export interface DropDownProps {
   id: string;
@@ -23,6 +18,7 @@ export interface DropDownProps {
   left?: number;
   top?: number;
   isCheckAvailable?: boolean;
+  Indicator?: ReactNode;
 }
 
 const DropDown = ({
@@ -36,6 +32,7 @@ const DropDown = ({
   left = 0,
   top = 0,
   isCheckAvailable = true,
+  Indicator,
   ...rest
 }: DropDownProps) => {
   const { containerRef, isDropdownOpen, handleClickDropdownTrigger, openDropdown } =
@@ -65,8 +62,14 @@ const DropDown = ({
   return (
     <S.Container ref={containerRef} {...rest}>
       <S.Indicator onClick={handleClickDropdownTrigger}>
-        Filter
-        {isDropdownOpen ? <Icon type="chevronUp" /> : <Icon type="chevronDown" />}
+        {Indicator ? (
+          Indicator
+        ) : (
+          <>
+            Filter
+            {isDropdownOpen ? <Icon type="chevronUp" /> : <Icon type="chevronDown" />}
+          </>
+        )}
       </S.Indicator>
       {isDropdownOpen && (
         <S.Panels left={left} top={top}>

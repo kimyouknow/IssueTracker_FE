@@ -1,8 +1,8 @@
 import { ComponentMeta, Story } from '@storybook/react';
 import { useState } from 'react';
 
-import { OptionsType } from '@/components/common/DropDown';
 import handlers from '@/mocks/handlers';
+import { OptionsType } from '@/types/option.type';
 
 import DropdownFilter, { DropdownFilterProps } from './index';
 

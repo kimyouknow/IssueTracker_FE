@@ -13,6 +13,7 @@ const DropdownFilter = ({
   left,
   top,
   initMode,
+  Indicator,
 }: DropdownFilterProps) => {
   // atom이 모두 달라서 종류마다 컴폰넌트를 만들어야 했다.
   const TargetDropdownFilter = ChildrenDropdownFilter[filterType];
@@ -23,6 +24,7 @@ const DropdownFilter = ({
       left={left}
       top={top}
       initMode={initMode}
+      Indicator={Indicator}
     />
   );
 };

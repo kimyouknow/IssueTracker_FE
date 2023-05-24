@@ -1,7 +1,9 @@
 import { useGetMembers } from '@/api/queries/member.query';
-import DropDown, { OptionsType } from '@/components/common/DropDown';
+import DropDown from '@/components/common/DropDown';
+import { parseToAuthorOptions } from '@/services/options.service';
+import { OptionsType } from '@/types/option.type';
 
-import { ChildDropDownFilterProps, parseToAuthorOptions } from '../DropdownFilter.type';
+import { ChildDropDownFilterProps } from '../DropdownFilter.type';
 
 const AuthorDropdownFilter = ({ ...rest }: ChildDropDownFilterProps) => {
   const { data, isLoading, isError } = useGetMembers();
