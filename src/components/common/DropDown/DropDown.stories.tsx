@@ -2,7 +2,9 @@ import { faker } from '@faker-js/faker';
 import { ComponentMeta, Story } from '@storybook/react';
 import { useState } from 'react';
 
-import DropDown, { DropDownProps, OptionsType } from './index';
+import { OptionsType } from '@/types/option.type';
+
+import DropDown, { DropDownProps } from './index';
 
 export default {
   title: 'common/DropDown',

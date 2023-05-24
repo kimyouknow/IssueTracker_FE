@@ -1,7 +1,9 @@
 import { useGetLabels } from '@/api/queries/label.query';
-import DropDown, { OptionsType } from '@/components/common/DropDown';
+import DropDown from '@/components/common/DropDown';
+import { parseToLabelOptions } from '@/services/options.service';
+import { OptionsType } from '@/types/option.type';
 
-import { ChildDropDownFilterProps, parseToLabelOptions } from '../DropdownFilter.type';
+import { ChildDropDownFilterProps } from '../DropdownFilter.type';
 
 const LabelDropdownFilter = ({ ...rest }: ChildDropDownFilterProps) => {
   const { data, isLoading, isError } = useGetLabels();

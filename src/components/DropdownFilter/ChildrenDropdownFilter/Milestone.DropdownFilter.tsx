@@ -1,7 +1,9 @@
 import { useGetMilestones } from '@/api/queries/milestone.query';
-import DropDown, { OptionsType } from '@/components/common/DropDown';
+import DropDown from '@/components/common/DropDown';
+import { parseToMilestoneOptions } from '@/services/options.service';
+import { OptionsType } from '@/types/option.type';
 
-import { ChildDropDownFilterProps, parseToMilestoneOptions } from '../DropdownFilter.type';
+import { ChildDropDownFilterProps } from '../DropdownFilter.type';
 
 const MilestoneDropdownFilter = ({ ...rest }: ChildDropDownFilterProps) => {
   const { data, isLoading, isError } = useGetMilestones();

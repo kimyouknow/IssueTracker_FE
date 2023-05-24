@@ -1,6 +1,7 @@
 import DropDown from '@/components/common/DropDown';
+import { loggedInUserOptions } from '@/services/options.service';
 
-import { ChildDropDownFilterProps, loggedInUserOptions } from '../DropdownFilter.type';
+import { ChildDropDownFilterProps } from '../DropdownFilter.type';
 
 const LoggedInUserDropdownFilter = ({ ...rest }: ChildDropDownFilterProps) => {
   return (
