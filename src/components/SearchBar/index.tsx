@@ -1,9 +1,10 @@
 import { useEffect, useState } from 'react';
 
-import DropDown, { OptionsType } from '@/components/common/DropDown';
+import DropDown from '@/components/common/DropDown';
 import Icon from '@/components/common/Icon';
 import { useDebounce } from '@/hooks/useDebounce';
 import useSearchFilter from '@/stores/search/useSearchFilter';
+import { OptionsType } from '@/types/option.type';
 
 import * as S from './SearchBar.style';
 
@@ -36,7 +37,7 @@ const SearchBar = ({ initValue = '' }: SearchBarProps) => {
   const handleClickFilterOption = (event: { target: any; type?: any }) => {
     const { value } = event.target;
     setFilterValue(value);
-    updateTextToFilterOption(value.map((v: OptionsType) => v.value).join(' '));
+    updateTextToFilterOption(value.map((v: OptionsType) => v.label).join(' '));
   };
 
   useEffect(() => {
