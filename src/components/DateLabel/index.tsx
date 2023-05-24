@@ -1,4 +1,4 @@
-import Icon from '@/components/common/Icon';
+import Icon from '@/components/Icon';
 import { DateType, formatDateYYMMDD } from '@/utils/date.util';
 
 import * as S from './DateLabel.style';

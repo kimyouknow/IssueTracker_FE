@@ -1,5 +1,5 @@
 import { useGetLabels } from '@/api/queries/label.query';
-import DropDown from '@/components/common/DropDown';
+import DropDown from '@/components/DropDown';
 import { parseToLabelOptions } from '@/services/options.service';
 import { OptionsType } from '@/types/option.type';
 

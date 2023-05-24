@@ -1,9 +1,9 @@
 import Image from 'next/image';
 
-import Icon from '@/components/common/Icon';
-import Label from '@/components/common/Label';
-import Progressive from '@/components/common/Progressive';
-import DropdownFilter from '@/components/DropdownFilter';
+import Icon from '@/components/Icon';
+import Label from '@/components/Label';
+import Progressive from '@/components/Progressive';
+import DropdownFilter from '@/modules/DropdownFilter';
 import {
   parseToAssignOptions,
   parseToLabelOptions,

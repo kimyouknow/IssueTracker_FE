@@ -1,4 +1,4 @@
-import DropDown from '@/components/common/DropDown';
+import DropDown from '@/components/DropDown';
 import { loggedInUserOptions } from '@/services/options.service';
 
 import { ChildDropDownFilterProps } from '../DropdownFilter.type';

@@ -1,6 +1,6 @@
 import { InputHTMLAttributes, useState } from 'react';
 
-import Icon from '@/components/common/Icon';
+import Icon from '@/components/Icon';
 
 import * as S from './ColorCode.style';
 import { ThemeSize } from './ColorCode.type';

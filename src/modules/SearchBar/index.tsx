@@ -1,7 +1,7 @@
 import { useEffect, useState } from 'react';
 
-import DropDown from '@/components/common/DropDown';
-import Icon from '@/components/common/Icon';
+import DropDown from '@/components/DropDown';
+import Icon from '@/components/Icon';
 import { useDebounce } from '@/hooks/useDebounce';
 import useSearchFilter from '@/stores/search/useSearchFilter';
 import { OptionsType } from '@/types/option.type';

@@ -2,7 +2,7 @@
 
 import { useGetLabels } from '@/api/queries/label.query';
 import { useGetMilestones } from '@/api/queries/milestone.query';
-import Icon from '@/components/common/Icon';
+import Icon from '@/components/Icon';
 import { PAGE_URL } from '@/constant/pageUrl.constant';
 
 import * as S from './TabsNav.style';

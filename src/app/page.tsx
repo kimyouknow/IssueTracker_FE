@@ -1,4 +1,4 @@
-import TabsNav from '@/components/TabsNav';
+import TabsNav from '@/modules/TabsNav';
 
 const Home = () => {
   return (

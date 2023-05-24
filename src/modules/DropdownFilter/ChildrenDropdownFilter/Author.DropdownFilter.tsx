@@ -1,5 +1,5 @@
 import { useGetMembers } from '@/api/queries/member.query';
-import DropDown from '@/components/common/DropDown';
+import DropDown from '@/components/DropDown';
 import { parseToAuthorOptions } from '@/services/options.service';
 import { OptionsType } from '@/types/option.type';
 

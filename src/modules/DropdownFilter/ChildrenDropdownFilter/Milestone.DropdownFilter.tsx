@@ -1,5 +1,5 @@
 import { useGetMilestones } from '@/api/queries/milestone.query';
-import DropDown from '@/components/common/DropDown';
+import DropDown from '@/components/DropDown';
 import { parseToMilestoneOptions } from '@/services/options.service';
 import { OptionsType } from '@/types/option.type';
 

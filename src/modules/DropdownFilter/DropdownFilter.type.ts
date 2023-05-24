@@ -1,4 +1,4 @@
-import { DropDownProps } from '@/components/common/DropDown';
+import { DropDownProps } from '@/components/DropDown';
 
 export type DropDownFilterType = 'loggedInUser' | 'author' | 'label' | 'milestone' | 'assign';
 

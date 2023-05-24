@@ -1,4 +1,4 @@
-import ChildrenDropdownFilter from '@/components/DropdownFilter/ChildrenDropdownFilter';
+import ChildrenDropdownFilter from '@/modules/DropdownFilter/ChildrenDropdownFilter';
 
 import { ChildDropDownFilterProps, DropDownFilterType } from './DropdownFilter.type';
 

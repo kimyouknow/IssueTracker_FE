@@ -1,7 +1,7 @@
 import Image from 'next/image';
 import { ReactNode } from 'react';
 
-import Icon from '@/components/common/Icon';
+import Icon from '@/components/Icon';
 import { OptionsType } from '@/types/option.type';
 
 import * as S from './DropDown.style';
