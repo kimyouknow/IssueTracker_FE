@@ -1,9 +1,9 @@
 import * as S from './Label.style';
-import { LabelType } from './Label.type';
+import { LabeCSSlType } from './Label.type';
 
 export interface LabelProps {
   text: string;
-  type: LabelType;
+  type: LabeCSSlType;
   backgroundColor?: string;
   color?: string;
 }

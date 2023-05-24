@@ -13,6 +13,9 @@ export const REQUEST_API = {
   LABEL: {
     INDEX: '/label',
   },
+  ISSUE: {
+    INDEX: '/issue',
+  },
 };
 
 export const ROOT_API_URL = '/api';

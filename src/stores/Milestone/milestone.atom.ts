@@ -1,16 +1,8 @@
 import { atom } from 'recoil';
 
-export interface MileStoneAtom {
-  id: string;
-  subject: string;
-  description: string;
-  endDate: string;
-  isOpen: boolean;
-  openIssueCount: number;
-  closeIssueCount: number;
-}
+import { MileStoneType } from '@/types/domain.type';
 
-export const mileStoneAtom = atom<MileStoneAtom[]>({
+export const mileStoneAtom = atom<MileStoneType[]>({
   key: 'mileStoneAtom',
   default: [],
 });

@@ -1,8 +1,12 @@
 import styled from '@emotion/styled';
 
-import { LabelType } from './Label.type';
+import { LabeCSSlType } from './Label.type';
 
-export const Container = styled.div<{ type: LabelType; backgroundColor?: string; color?: string }>`
+export const Container = styled.div<{
+  type: LabeCSSlType;
+  backgroundColor?: string;
+  color?: string;
+}>`
   display: flex;
   justify-content: center;
   align-items: center;

@@ -1,22 +1,26 @@
 import { AxiosResponse } from 'axios';
 
-import { AssignAtom } from '@/stores/Assign/assign.atom';
-import { LabelAtom } from '@/stores/Label/label.atom';
-import { MileStoneAtom } from '@/stores/Milestone/milestone.atom';
+import { AssignType, IssueType, LabelType, MileStoneType } from '@/types/domain.type';
 
 export interface GetMileStonesType {
   countOfOpenMilestones: number;
   countOfClosedMilestones: number;
-  milestones: MileStoneAtom[];
+  milestones: MileStoneType[];
 }
 
 export interface GetLabelsType {
-  labels: LabelAtom[];
+  labels: LabelType[];
 }
 
-// FIXME: AssignAtom과 AuthorAtom형태가 같은데 사용하는 atom은 다름.
+// FIXME: AssignType AuthorType형태가 같은데 사용하는 atom은 다름.
 export interface GetMembersType {
-  members: AssignAtom[];
+  members: AssignType[];
+}
+
+export interface GetIssueType {
+  countOfOpenIssues: number;
+  countOfClosedIssues: number;
+  issues: IssueType[];
 }
 
 export interface ErrorResponseType {

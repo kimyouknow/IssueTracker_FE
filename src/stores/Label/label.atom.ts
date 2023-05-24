@@ -1,14 +1,8 @@
 import { atom } from 'recoil';
 
-export interface LabelAtom {
-  id: string;
-  title: string;
-  description: string;
-  color: string;
-  bgColor: string;
-}
+import { LabelType } from '@/types/domain.type';
 
-export const labelAtom = atom<LabelAtom[]>({
+export const labelAtom = atom<LabelType[]>({
   key: 'labelAtom',
   default: [],
 });

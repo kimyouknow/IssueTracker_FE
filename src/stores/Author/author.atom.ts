@@ -1,12 +1,8 @@
 import { atom } from 'recoil';
 
-export interface AuthorAtom {
-  id: string;
-  nickname: string;
-  profileUrl: string;
-}
+import { AuthorType } from '@/types/domain.type';
 
-export const authorAtom = atom<AuthorAtom[]>({
+export const authorAtom = atom<AuthorType[]>({
   key: 'authorAtom',
   default: [],
 });
