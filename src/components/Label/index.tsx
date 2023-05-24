@@ -1,16 +1,24 @@
 import * as S from './Label.style';
-import { LabeCSSlType } from './Label.type';
+import { LabeCSSlType, LabelSizeType } from './Label.type';
 
 export interface LabelProps {
   text: string;
   type: LabeCSSlType;
   backgroundColor?: string;
   color?: string;
+  size?: LabelSizeType;
 }
 
-const Label = ({ text, type = 'custom', backgroundColor, color }: LabelProps) => {
+const Label = ({
+  text,
+  type = 'custom',
+  backgroundColor,
+  color,
+  size = 'l',
+  ...rest
+}: LabelProps) => {
   return (
-    <S.Container type={type} backgroundColor={backgroundColor} color={color}>
+    <S.Container type={type} backgroundColor={backgroundColor} color={color} size={size} {...rest}>
       <S.Text>{text}</S.Text>
     </S.Container>
   );
