@@ -30,7 +30,7 @@ export interface MileStoneType {
 
 export interface IssueType {
   id: string;
-  status: string;
+  status: 'OPEN' | 'CLOSE';
   subject: string;
   writer: string;
   profileUrl: string;
