@@ -4,10 +4,10 @@ import { LabelAtom } from '@/stores/Label/label.atom';
 
 const createLabel = (): LabelAtom => ({
   id: faker.datatype.uuid(),
-  title: faker.name.jobTitle(),
+  title: faker.name.jobType(),
   description: faker.name.jobDescriptor(),
   color: faker.color.rgb({ format: 'hex', casing: 'lower' }),
   bgColor: faker.color.rgb({ format: 'hex', casing: 'lower' }),
 });
 
-export const createRandomMilestones = (n: number) => Array.from({ length: n }, () => createLabel());
+export const createRandomLabels = (n: number) => Array.from({ length: n }, () => createLabel());
