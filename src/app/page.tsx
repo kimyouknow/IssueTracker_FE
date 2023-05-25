@@ -1,3 +1,4 @@
+import IssueList from '@/modules/IssueList';
 import TabsNav from '@/modules/TabsNav';
 
 const Home = () => {
@@ -5,6 +6,7 @@ const Home = () => {
     <main>
       <h1>hello</h1>
       <TabsNav />
+      <IssueList />
     </main>
   );
 };

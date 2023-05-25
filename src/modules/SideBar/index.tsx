@@ -9,17 +9,15 @@ import {
   parseToLabelOptions,
   parseToMilestoneOptions,
 } from '@/services/options.service';
-import { AssignAtom } from '@/stores/Assign/assign.atom';
-import { LabelAtom } from '@/stores/Label/label.atom';
-import { MileStoneAtom } from '@/stores/Milestone/milestone.atom';
+import { AssignType, LabelType, MileStoneType } from '@/types/domain.type';
 
 import * as S from './SideBar.style';
 
 export interface SideBarProps {
   onChange: (prop: any) => void;
-  assigns: AssignAtom[];
-  labels: LabelAtom[];
-  milestones: MileStoneAtom[];
+  assigns: AssignType[];
+  labels: LabelType[];
+  milestones: MileStoneType[];
 }
 
 // TODO: onchange -> rhf useContext 사용하는 방법으로 수정하기

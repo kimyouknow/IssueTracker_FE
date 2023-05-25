@@ -1,12 +1,8 @@
 import { atom } from 'recoil';
 
-export interface AssignAtom {
-  id: string;
-  nickname: string;
-  profileUrl: string;
-}
+import { AssignType } from '@/types/domain.type';
 
-export const assignAtom = atom<AssignAtom[]>({
+export const assignAtom = atom<AssignType[]>({
   key: 'assignAtom',
   default: [],
 });

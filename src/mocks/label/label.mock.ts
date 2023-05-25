@@ -1,8 +1,8 @@
 import { faker } from '@faker-js/faker';
 
-import { LabelAtom } from '@/stores/Label/label.atom';
+import { LabelType } from '@/types/domain.type';
 
-const createLabel = (): LabelAtom => ({
+const createLabel = (): LabelType => ({
   id: faker.datatype.uuid(),
   title: faker.name.jobType(),
   description: faker.name.jobDescriptor(),

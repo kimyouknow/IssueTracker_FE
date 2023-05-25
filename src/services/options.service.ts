@@ -1,7 +1,4 @@
-import { AssignAtom } from '@/stores/Assign/assign.atom';
-import { AuthorAtom } from '@/stores/Author/author.atom';
-import { LabelAtom } from '@/stores/Label/label.atom';
-import { MileStoneAtom } from '@/stores/Milestone/milestone.atom';
+import { AssignType, AuthorType, LabelType, MileStoneType } from '@/types/domain.type';
 import { OptionsType } from '@/types/option.type';
 
 export const loggedInUserOptions = [
@@ -11,7 +8,7 @@ export const loggedInUserOptions = [
   { id: 'closeIssue', label: '닫힌 이슈' },
 ];
 
-export const parseToAuthorOptions = (members: AuthorAtom[]): OptionsType[] => {
+export const parseToAuthorOptions = (members: AuthorType[]): OptionsType[] => {
   const options = [...members].map(({ id, nickname, profileUrl }) => ({
     id,
     label: nickname,
@@ -21,7 +18,7 @@ export const parseToAuthorOptions = (members: AuthorAtom[]): OptionsType[] => {
   return options;
 };
 
-export const parseToAssignOptions = (members: AssignAtom[], isNoOption = true): OptionsType[] => {
+export const parseToAssignOptions = (members: AssignType[], isNoOption = true): OptionsType[] => {
   const options = [...members].map(({ id, nickname, profileUrl }) => ({
     id,
     label: nickname,
@@ -34,7 +31,7 @@ export const parseToAssignOptions = (members: AssignAtom[], isNoOption = true): 
   return optionsWithNo;
 };
 
-export const parseToLabelOptions = (labels: LabelAtom[], isNoOption = true): OptionsType[] => {
+export const parseToLabelOptions = (labels: LabelType[], isNoOption = true): OptionsType[] => {
   const options = [...labels].map(({ id, title, bgColor }) => ({
     id,
     label: title,
@@ -48,7 +45,7 @@ export const parseToLabelOptions = (labels: LabelAtom[], isNoOption = true): Opt
 };
 
 export const parseToMilestoneOptions = (
-  milestones: MileStoneAtom[],
+  milestones: MileStoneType[],
   isNoOption = true,
 ): OptionsType[] => {
   const options = [...milestones].map(({ id, subject }) => ({

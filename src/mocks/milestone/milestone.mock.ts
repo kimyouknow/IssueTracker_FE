@@ -1,9 +1,9 @@
 import { faker } from '@faker-js/faker';
 
-import { MileStoneAtom } from '@/stores/Milestone/milestone.atom';
+import { MileStoneType } from '@/types/domain.type';
 import { formatDateYYMMDD } from '@/utils/date.util';
 
-const createMilestone = (): MileStoneAtom => ({
+const createMilestone = (): MileStoneType => ({
   id: faker.datatype.uuid(),
   subject: faker.name.jobTitle(),
   description: faker.name.jobDescriptor(),
