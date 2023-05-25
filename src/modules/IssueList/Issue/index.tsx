@@ -11,6 +11,7 @@ import * as S from './Issue.style';
 // eslint-disable-next-line @typescript-eslint/no-empty-interface
 export interface IssueProps extends IssueType {
   isChecked: boolean;
+  onChange: (prop: any) => void;
 }
 
 const Issue = ({
@@ -23,13 +24,14 @@ const Issue = ({
   milestone,
   labels,
   isChecked,
+  onChange,
 }: IssueProps) => {
   const isOpen = status === 'OPEN';
 
   return (
     <S.Container>
       <S.InfoWrapper>
-        <CheckInput checked={isChecked} />
+        <CheckInput checked={isChecked} onChange={onChange} />
         <S.Info>
           <S.Title>
             {isOpen ? <Icon type="alertCircle" /> : <Icon type="archive" />}
