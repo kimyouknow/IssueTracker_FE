@@ -9,3 +9,7 @@ export const labelQueryKey = {
 export const memberQueryKey = {
   member: ['member'] as const,
 };
+
+export const issueQueryKey = {
+  issues: ['issues'] as const,
+};
