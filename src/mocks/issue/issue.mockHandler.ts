@@ -12,7 +12,7 @@ const issueMockHandler = [
       ctx.json({
         countOfOpenIssues: 10,
         countOfClosedIssues: 0,
-        milestones: createRandomIssues(10),
+        issues: createRandomIssues(10),
       }),
     );
   }),
