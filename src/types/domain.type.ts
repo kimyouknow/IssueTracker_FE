@@ -40,3 +40,15 @@ export interface IssueType {
   assignees: AssignType[];
   labels: LabelType[];
 }
+
+export type CommentStatusType = 'INITIAL' | 'CLOSED' | 'REOPEN';
+
+// 이모티콘은 우선 제외
+export interface CommentType {
+  writer: AssignType;
+  commentId: string;
+  content: string;
+  createDateTime: string;
+  status: CommentStatusType;
+  isEditable: boolean;
+}
