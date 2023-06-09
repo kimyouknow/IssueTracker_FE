@@ -1,7 +1,7 @@
 'use client';
 
 import { useGetIssues } from '@/api/queries/issue.query';
-import Issue from '@/modules/IssueList/Issue';
+import Issue from '@/modules/Issue';
 
 import * as S from './IssueList.style';
 

@@ -1,8 +1,8 @@
 import { faker } from '@faker-js/faker';
 
-import { AssignAtom } from '@/stores/Assign/assign.atom';
+import { AssignType } from '@/types/domain.type';
 
-const createMember = (): AssignAtom => ({
+const createMember = (): AssignType => ({
   id: faker.datatype.uuid(),
   nickname: faker.name.fullName(),
   profileUrl: faker.image.avatar(),
