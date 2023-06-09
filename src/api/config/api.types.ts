@@ -1,6 +1,6 @@
 import { AxiosResponse } from 'axios';
 
-import { AssignType, IssueType, LabelType, MileStoneType } from '@/types/domain.type';
+import { AssignType, CommentType, IssueType, LabelType, MileStoneType } from '@/types/domain.type';
 
 export interface GetMileStonesType {
   countOfOpenMilestones: number;
@@ -21,6 +21,10 @@ export interface GetIssueType {
   countOfOpenIssues: number;
   countOfClosedIssues: number;
   issues: IssueType[];
+}
+
+export interface GetCommentsType {
+  comments: CommentType[];
 }
 
 export interface ErrorResponseType {

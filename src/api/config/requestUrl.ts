@@ -16,6 +16,9 @@ export const REQUEST_API = {
   ISSUE: {
     INDEX: '/issue',
   },
+  COMMENT: {
+    INDEX: '/comment',
+  },
 };
 
 export const ROOT_API_URL = '/api';

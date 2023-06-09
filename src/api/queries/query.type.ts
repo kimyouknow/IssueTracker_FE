@@ -13,3 +13,8 @@ export const memberQueryKey = {
 export const issueQueryKey = {
   issues: ['issues'] as const,
 };
+
+export const commentQueryKey = {
+  comments: ['comments'] as const,
+  detail: (issueId: string) => [...commentQueryKey.comments, 'detail', issueId.toString()] as const,
+};
